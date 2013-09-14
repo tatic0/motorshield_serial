@@ -11,8 +11,8 @@ int currentPosS2;      //current position servo 2
 int speedDC1 = 0;      //DC motor 1 speed
 int speedDC2 = 0;      //DC motor 2 speed
 
-AF_DCMotor motor1(2);
-AF_DCMotor motor2(4);
+AF_DCMotor motor1(2,MOTOR12_64KHZ);
+AF_DCMotor motor2(4,MOTOR34_64KHZ);
 Servo servo1;  // create servo object to control a servo. A maximum of eight servo objects can be created 
 Servo servo2;  
 
@@ -38,7 +38,9 @@ void setup() {
    w = 119
    x = 120
    h = 104
+   H = 72
    j = 106
+   J = 74
    k = 107
    l = 108
    */
@@ -102,28 +104,28 @@ void loop() {
       posS2 = 0;
       break;
     case 104:
-      motor1.setSpeed(99);
+      motor1.setSpeed(127);
       motor1.run(FORWARD);
-      delay(2500);
+      break;
+    case 72:
       motor1.run(RELEASE); 
-      delay(250);
       break;
     case 106:
-      motor1.setSpeed(99);
+      motor1.setSpeed(127);
       motor1.run(BACKWARD);
-      delay(2500);
+      break;
+    case 74:
       motor1.run(RELEASE); 
-      delay(250);
       break;
     case 107:
-      motor2.setSpeed(99);
+      motor2.setSpeed(127);
       motor2.run(FORWARD);
       delay(2500);
       motor2.run(RELEASE); 
       delay(250);
       break;
     case 108:
-      motor2.setSpeed(99);
+      motor2.setSpeed(127);
       motor2.run(BACKWARD);
       delay(2500);
       motor2.run(RELEASE); 
