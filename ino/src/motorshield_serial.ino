@@ -31,9 +31,9 @@ void setup() {
   motor2.setSpeed(50);
   motor2.run(RELEASE);
 
-  /* ascii codes for the keys to de used:
+  /* ascii codes for the keys to be used:
    a = 97
-   s= 115
+   s = 115
    d = 100
    w = 119
    x = 120
